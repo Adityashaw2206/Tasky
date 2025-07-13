@@ -2,8 +2,8 @@
 // // App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/LandingPage.jsx';
-import Login from './pages/login/Login.jsx';
-import Register from './pages/Register/Register.jsx';
+import Login from './pages/Login_/Login.jsx';
+import Register from './pages/Register_/Register.jsx';
 import Layout from './pages/Layout/Layout.jsx';
 import Home from './pages/Home/Home.jsx';
 import AddTask from './pages/AddTask/AddTask.jsx';
