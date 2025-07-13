@@ -142,4 +142,4 @@ const getCurrentUser = AsyncHandler(async (req, res) => {
   return res.status(200).json(new ApiResponse(200, user, "User fetched successfully"));
 });
 
-export { registerUser, loginUser, logoutUser, getCurrentUser };
+export { registerUser, loginUser, logoutUser, getCurrentUser }

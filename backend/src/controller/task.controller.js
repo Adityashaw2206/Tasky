@@ -9,7 +9,7 @@ export const createTask = AsyncHandler(async (req, res) => {
   const { title, description, dueDate, status, priority } = req.body;
 
   if (!title) {
-    throw new ApiError(400, "Title is required");
+    throw new ApiError(400, "Title is required")
   }
 
   const task = await Task.create({

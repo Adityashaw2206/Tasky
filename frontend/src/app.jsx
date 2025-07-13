@@ -13,7 +13,6 @@ import Sidebar from './pages/Sidebar/Sidebar.jsx';
 import { Toaster } from "react-hot-toast";
 
 
-
 function App() {
   return (
     <Router>
