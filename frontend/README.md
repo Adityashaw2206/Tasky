@@ -1,54 +1,127 @@
-# React + TypeScript + Vite
+# 📝 Tasky - Full-Stack Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tasky is a modern and responsive full-stack task management application that helps users create, track, prioritize, and complete their daily tasks efficiently. Built with the MERN stack, it includes user authentication, filters, priority management, drag-and-drop reordering, due date support, and inline editing.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+* ✅ User Authentication (Register/Login/Logout)
+* ✅ Create, Edit, Delete Tasks
+* ✅ Mark Tasks as Completed
+* ✅ Inline Editing of Title and Description
+* ✅ Filter by Status and Priority
+* ✅ Sort by Created Date, Due Date, or Priority
+* ✅ Drag-and-Drop Reordering
+* ✅ Toast Notifications
+* ✅ Mobile Responsive Design
+* ✅ Protected Routes with JWT Authentication
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+### Frontend:
+
+* React
+* Tailwind CSS
+* React Router
+* Axios
+* React Hot Toast
+* @hello-pangea/dnd (for drag-and-drop)
+
+### Backend:
+
+* Node.js
+* Express.js
+* MongoDB + Mongoose
+* JWT for authentication
+* Cookie-parser
+
+---
+
+## 📦 Folder Structure
+
+```
+client/
+├── components/
+├── pages/
+│   ├── Home.jsx
+│   ├── Tasks.jsx
+├── App.jsx
+├── main.jsx
+└── ...
+
+server/
+├── controller/
+│   └── user.controller.js
+│   └── task.controller.js
+├── middleware/
+├── model/
+│   └── user.model.js
+│   └── task.model.js
+├── routes/
+│   └── user.routes.js
+│   └── task.routes.js
+├── utils/
+└── index.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔐 Environment Variables
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Create a `.env` file in the backend root:
+
 ```
+PORT=5500
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
+```
+
+---
+
+## 🧪 How to Run Locally
+
+### Backend:
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+### Frontend:
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+Make sure the backend is running at `http://localhost:5500` and frontend at `http://localhost:5173`.
+
+---
+
+## 🌐 Deployment
+
+* Frontend: Vercel
+* Backend: Render / Railway / Cyclic / Your choice
+* MongoDB: Atlas
+
+Make sure to update the frontend `.env` or Axios base URL to point to your backend's live URL.
+
+---
+
+## 👨‍💻 Author
+
+**Aditya Shaw**
+3rd Year B.Tech IT Student
+Skills: HTML, CSS, JavaScript, React, Node.js, Express, MongoDB
+
+---
+
+## 📃 License
+
+This project is open-source and free to use for educational purposes.
