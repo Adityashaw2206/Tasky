@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input.jsx";
-import Button from "../../components/Button/Button.jsx";
+import Button from "../../components/Button/Button.jsx"
 
 const Login = () => {
   const [username, setUsername] = useState("");
